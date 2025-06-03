@@ -1,0 +1,6 @@
+ 
+flask
+flask-cors
+kafka-python
+pandas
+plotly

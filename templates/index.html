@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dashboard cen kruszyw</title>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <style>
+    body { font-family: Arial; margin: 30px; background: #f4f4f4; }
+    h1 { color: #333; }
+    #controls { margin-bottom: 20px; }
+    select, button {
+      padding: 6px 10px;
+      font-size: 16px;
+      margin-right: 10px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 30px;
+      background: white;
+    }
+    th, td {
+      padding: 8px;
+      border: 1px solid #ccc;
+      text-align: center;
+    }
+    th {
+      background: #333;
+      color: white;
+    }
+    tr:nth-child(even) {
+      background-color: #eee;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Dashboard cen kruszyw</h1>
+
+  <div id="controls">
+    <select id="commoditySelector"></select>
+
+    <select id="timeRange">
+      <option value="5">Ostatnie 5 minut</option>
+      <option value="30">Ostatnie 30 minut</option>
+      <option value="60">Ostatnia godzina</option>
+      <option value="1440">Ostatnia doba</option>
+      <option value="all">Całość</option>
+    </select>
+  </div>
+
+  <div id="plot"></div>
+
+  <h2>Alerty</h2>
+  <table id="alertsTable">
+    <thead>
+      <tr><th>Surowiec</th><th>Cena</th><th>% zmiany</th><th>Akcja</th><th>Czas</th></tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
